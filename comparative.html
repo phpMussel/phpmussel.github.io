@@ -1,0 +1,1263 @@
+<!doctype html>
+<html lang="en-AU" xml:lang="en-AU" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+  <title>Anti-Virus Comparative Charts</title>
+</head>
+
+<div class="co"><br />
+  <div class="ci">
+    <div class="logo">
+      <img class="logoImg" src="https://raw.githubusercontent.com/phpMussel/extras/master/Branding/phpMussel_48x48.jpg" alt="Icon" border="0" />
+      <header>
+        <big>Anti-Virus Comparative Chart</big><br />
+        <br />
+      </header>
+    </div>
+    <hr />
+
+    <div class="content">
+      <section>
+        <p>
+          The purpose of this chart is to compare the range and efficacy of the various
+          mechanisms utilised by various different anti-virus solutions (with
+          particular interest in how well phpMussel holds up against those various
+          different anti-virus solutions in regards to those mechanisms), by way of
+          scanning various permutations of EICAR (the industry standard sample
+          generally used to confirm the functionality and efficacy of anti-virus
+          signatures, signature databases, and the engines that utilise them).<br />
+          <br />
+          In the context of this chart, "permutations" refers to permutations of the
+          original sample's <em>container</em> (e.g., whether uncontained, contained in
+          a ZIP file, in a GZ file, as an embedded file within a PDF document, etc),
+          but doesn't refer to permutations of the actual original sample <em>itself</em>.<br />
+          <br />
+          The reason why the chart considers various permutations of EICAR, to the
+          exclusion of any other samples or any other kinds of permutations, is that my
+          interest in writing this chart is <em>not</em> towards signatures or
+          signature databases, but rather, the ability of the anti-virus solutions in
+          question to handle and process files in such a way as to be able to deal with
+          these permutations with their existing signatures, without the need to write
+          additional signatures for each and every permutation.<br />
+          <br />
+          This is helpful to indicate whether further work needs to be done for an
+          engine to be able to read and understand specific container formats, whether
+          existing mechanisms are sufficient, or whether scanning a file blindly
+          without regard to its format may be acceptable in some instances.<br />
+          <br />
+          To keep things simple, I'll indicate only whether the scan results in a
+          <span class="txtGn">(✔️)hit (meaning, detected)</span>, a
+          <span class="txtRd">(❌)miss (meaning, not detected)</span>, or
+          <span class="txtOe">(❓)other (meaning, something went wrong when scanning, the
+          results are generally unavailable at the time, or the results are unknown)</span>,
+          without regard to the specific identifiers, virus names, or other information
+          produced as a result the scan.<br />
+          <br />
+          The beginning of the chart will show phpMussel, since it's my primary
+          interest, followed by ClamAV, since phpMussel's signatures are based upon
+          ClamAV's signatures. All remaining engines will be listed alphabetically.
+        </p>
+      </section>
+
+      <section>
+        <div class="v">
+        <table>
+          <tr>
+            <td class="h1l2">Sample</td>
+            <td class="h1"><span class="tb">phpMussel</span></td>
+            <td class="h1"><span class="tb">ClamAV</span></td>
+            <td class="h1"><span class="tb">ALYac</span></td>
+            <td class="h1"><span class="tb">AVG</span></td>
+            <td class="h1"><span class="tb">Acronis</span></td>
+            <td class="h1"><span class="tb">Ad Aware</span></td>
+            <td class="h1"><span class="tb">AegisLab</span></td>
+            <td class="h1"><span class="tb">AhnLab V3</span></td>
+            <td class="h1"><span class="tb">Alibaba</span></td>
+            <td class="h1"><span class="tb">Antiy AVL</span></td>
+            <td class="h1"><span class="tb">Arcabit</span></td>
+            <td class="h1"><span class="tb">Avast</span></td>
+            <td class="h1"><span class="tb">Avast Mobile</span></td>
+            <td class="h1"><span class="tb">Avira</span></td>
+            <td class="h1"><span class="tb">Baidu</span></td>
+            <td class="h1"><span class="tb">BitDefender</span></td>
+            <td class="h1"><span class="tb">BitDefenderTheta</span></td>
+            <td class="h1"><span class="tb">Bkav</span></td>
+            <td class="h1"><span class="tb">CAT QuickHeal</span></td>
+            <td class="h1"><span class="tb">CMC</span></td>
+            <td class="h1"><span class="tb">Comodo</span></td>
+            <td class="h1"><span class="tb">CrowdStrike Falcon</span></td>
+            <td class="h1"><span class="tb">Cybereason</span></td>
+            <td class="h1"><span class="tb">Cylance</span></td>
+            <td class="h1"><span class="tb">Cynet</span></td>
+            <td class="h1"><span class="tb">Cyren</span></td>
+            <td class="h1"><span class="tb">DrWeb</span></td>
+            <td class="h1"><span class="tb">ESET NOD32</span></td>
+            <td class="h1"><span class="tb">Elastic</span></td>
+            <td class="h1"><span class="tb">Emsisoft</span></td>
+            <td class="h1"><span class="tb">Endgame</span></td>
+            <td class="h1"><span class="tb">F Prot</span></td>
+            <td class="h1"><span class="tb">F Secure</span></td>
+            <td class="h1"><span class="tb">FireEye</span></td>
+            <td class="h1"><span class="tb">Fortinet</span></td>
+            <td class="h1"><span class="tb">GData</span></td>
+            <td class="h1"><span class="tb">Gridinsoft</span></td>
+            <td class="h1"><span class="tb">Ikarus</span></td>
+            <td class="h1"><span class="tb">Jiangmin</span></td>
+            <td class="h1"><span class="tb">K7AntiVirus</span></td>
+            <td class="h1"><span class="tb">K7GW</span></td>
+            <td class="h1"><span class="tb">Kaspersky</span></td>
+            <td class="h1"><span class="tb">Kingsoft</span></td>
+            <td class="h1"><span class="tb">Lastline</span></td>
+            <td class="h1"><span class="tb">MAX</span></td>
+            <td class="h1"><span class="tb">Malwarebytes</span></td>
+            <td class="h1"><span class="tb">MaxSecure</span></td>
+            <td class="h1"><span class="tb">McAfee</span></td>
+            <td class="h1"><span class="tb">McAfee GW Edition</span></td>
+            <td class="h1"><span class="tb">Microsoft</span></td>
+            <td class="h1"><span class="tb">NANO Antivirus</span></td>
+            <td class="h1"><span class="tb">OS X Sandbox</span></td>
+            <td class="h1"><span class="tb">Palo Alto Networks</span></td>
+            <td class="h1"><span class="tb">Panda</span></td>
+            <td class="h1"><span class="tb">Qihoo 360</span></td>
+            <td class="h1"><span class="tb">Rising</span></td>
+            <td class="h1"><span class="tb">SUPERAntiSpyware</span></td>
+            <td class="h1"><span class="tb">Sangfor Engine Zero</span></td>
+            <td class="h1"><span class="tb">SecureAge APEX</span></td>
+            <td class="h1"><span class="tb">SentinelOne</span></td>
+            <td class="h1"><span class="tb">Sophos AV</span></td>
+            <td class="h1"><span class="tb">Sophos ML</span></td>
+            <td class="h1"><span class="tb">Symantec</span></td>
+            <td class="h1"><span class="tb">Symantec Mobile Insight</span></td>
+            <td class="h1"><span class="tb">TACHYON</span></td>
+            <td class="h1"><span class="tb">Tencent</span></td>
+            <td class="h1"><span class="tb">TotalDefense</span></td>
+            <td class="h1"><span class="tb">Trapmine</span></td>
+            <td class="h1"><span class="tb">TrendMicro</span></td>
+            <td class="h1"><span class="tb">TrendMicro HouseCall</span></td>
+            <td class="h1"><span class="tb">Trustlook</span></td>
+            <td class="h1"><span class="tb">VBA32</span></td>
+            <td class="h1"><span class="tb">VIPRE</span></td>
+            <td class="h1"><span class="tb">ViRobot</span></td>
+            <td class="h1"><span class="tb">Webroot</span></td>
+            <td class="h1"><span class="tb">Yandex</span></td>
+            <td class="h1"><span class="tb">Zillya</span></td>
+            <td class="h1"><span class="tb">ZoneAlarm</span></td>
+            <td class="h1"><span class="tb">Zoner</span></td>
+            <td class="h1"><span class="tb">eGambit</span></td>
+            <td class="h1"><span class="tb">eScan</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f/detection">eicar.txt</a><br /><small>Original sample; No container.<br />Scan date: 2020.11.22</small></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/4daf4edbb04383b93094e89636f303bb11ab687636a4d40813e930c213c3b513/detection">eicar.pdf</a><br /><small>Embedded in PDF 1.1 document.<br />Scan date: 2020.11.22</small></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/30090f902cead484616d3a8041f0e18242b22566aeea28160865bfe2227f72f6/detection">eicar.ppt</a><br /><small>Embedded in PPT (PowerPoint Presentation) document.<br />Scan date: 2020.11.22</small></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/1de6b6b8c9d1479e2c2e6913c76ed21f1d435f8056715949137ed5ce9bdfdf39/detection">eicar.txt.gz</a><br /><small>GZip archive using deflate.<br />Scan date: 2020.11.23</small></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/0484f32f340f4085e7db00467f40bc4223ab5e5d92e168312b58a6f5f0e2e5aa/detection">eicar.txt.bz2</a><br /><small>Bzip2 archive.<br />Scan date: 2020.11.23</small></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/85de0dc51e8c3b8258678dc0d0ab3c96e5210c346afd182b1ef9ef08828f495d/detection">eicar.txt.tar</a><br /><small>Tar archive.<br />Scan date: 2020.11.23</small></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/1de6b6b8c9d1479e2c2e6913c76ed21f1d435f8056715949137ed5ce9bdfdf39/detection">eicar.txt.deflate.zip</a><br /><small>Zip archive using deflate.<br />Scan date: 2020.11.23</small></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/8559addcbfeef68793a1ec336e7991754fd1f157cb16287fc08b71990c175299/detection">eicar.txt.lzma.zip</a><br /><small>Zip archive using LZMA.<br />Scan date: 2020.11.23</small></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/6bf36a361b64851dad6ed2e801c0361858bc418f4c423d41ce4d04d54a114821/detection">eicar.txt.wim</a><br /><small>Wim archive.<br />Scan date: 2020.11.23</small></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/9f0213841735a8d8a72087099996bf5c86493b4f6a47cc35e5c6f26c2e6bbaac/detection">eicar.txt.lzma2.7z</a><br /><small>7z archive using LZMA2.<br />Scan date: 2020.11.23</small></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/8896a8f0e70d9cf54f7831d48dd449adc2379d1991e7a674f68aebd64fbd3478/detection">eicar.txt.lzma2.xz</a><br /><small>XZ archive using LZMA2.<br />Scan date: 2020.11.23</small></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/17e3749e2168f2f273ccdbb73b653b39cddcc0a3104cf24397e598aa456ab5fa/detection">eicar.phar</a><br /><small>Phar archive (PHP archive).<br />Scan date: 2020.11.23</small></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+          </tr>
+          <tr>
+            <td class="h1l2"><a href="https://www.virustotal.com/gui/file/3f8fbb65ccda1ff5018bcca7c57c804bf83da5aea2f48a041440373e8ae2b37e/detection">eicar.rtf</a><br /><small>Embedded in RTF (Rich-Text Format) document.<br />Scan date: 2020.11.23</small></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtRd">❌</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+            <td class="h1"><span class="txtOe">❓</span></td>
+            <td class="h1"><span class="txtGn">✔️</span></td>
+          </tr>
+        </table>
+        </div>
+      </section>
+
+    </div>
+    <hr />
+
+    <div class="gen">
+      <em>
+        <span class="hostedBy">Hosted on GitHub Pages.</span>
+        Last modified: <time datetime="2020-11-23">2020.11.23</time>.
+      </em>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
