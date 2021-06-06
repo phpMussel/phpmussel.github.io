@@ -22,7 +22,7 @@ table,.gen,.logo,.txtGn,.txtOe,.txtRd,a{font-weight:700}
 .txtOe{color:#a04100}
 .txtRd{color:#cb2431}
 p{margin-top:0;margin-bottom:10px}
-.tb{writing-mode:tb;text-orientation:upright;letter-spacing:-3px}
+.tb{writing-mode:vertical-lr;vertical-align:bottom}
 .h1{border-style:solid solid none none}
 .h1l2{border-style:solid dotted none solid}
 .h1,.h1l2{margin:0;padding:4px;border-width:1px;border-color:#999;background-color:#eee}
